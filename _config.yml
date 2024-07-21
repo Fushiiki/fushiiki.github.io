@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Fushiiki's Blog
-email: -
+email: "-"
 description: This is a basic static site created for blogging purposes.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://github.com/Fushiiki/fushiiki.github.io" # the base hostname & protocol for your site, e.g. http://example.com
