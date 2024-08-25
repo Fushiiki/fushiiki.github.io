@@ -7,11 +7,31 @@
 	{% seo %}
 	
 		<title>My Blogging site</title>
-		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 		
 	</head>
+	
 	<body>
-		{% include navigation.html%}
-		{{ content }}
+	
+	<header>
+      <div class="container">
+        <a id="a-title" href="{{ '/' | relative_url }}">
+          <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        </a>
+        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
+
+        <section id="viewsite">
+          <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View source code on GitHub</a>
+        </section>
+      </div>
+    </header>
+	
+	<div class="container">
+      <section id="main_content">
+	  	{% include navigation.html%}
+        {{ content }}
+      </section>
+    </div>
+
 	</body>
 </html>
